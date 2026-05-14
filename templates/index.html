@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AMP AI Expo — AI-Powered ESG Reporting & Analytics</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">ESG<span class="dot">.</span>KG</span>
+      <span class="event">AMP AI Expo &middot; 12 May 2026</span>
+    </div>
+    <h1>AI-Powered ESG Reporting &amp; Analytics</h1>
+    <p class="subtitle">A working agent over a SASB-aligned knowledge graph + Clarity AI ESG dataset.</p>
+    <nav class="page-tabs" role="tablist">
+      <button class="page-tab active" data-page="agent">1. ESG Knowledge Agent</button>
+      <button class="page-tab" data-page="analytics">2. ESG Analytics for Reporting</button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============== PAGE 1 ============== -->
+    <section id="page-agent" class="page active">
+      <div class="page-intro">
+        <h2>Ask the agent.</h2>
+        <p class="lede">
+          The agent searches our internal SASB knowledge graph first, then extends with
+          wider context. Each part of the answer is labelled <span class="badge kg">KG-grounded</span>
+          or <span class="badge llm">LLM-extended</span> so you know what's verified.
+        </p>
+      </div>
+
+      <div class="ask-row">
+        <input
+          id="agent-question"
+          type="text"
+          placeholder="Ask anything about ESG, SASB materiality, a specific company, or a metric…"
+          autocomplete="off"
+        />
+        <button id="agent-ask-btn" class="primary">Ask</button>
+      </div>
+
+      <div class="chip-row" aria-label="Suggested questions">
+        <span class="chip-label">Try:</span>
+        {% for q in suggested %}
+        <button class="chip" data-q="{{ q.label }}">{{ q.label }}</button>
+        {% endfor %}
+      </div>
+
+      <article id="agent-answer" class="answer-card" hidden>
+        <div class="answer-meta">
+          <span id="agent-question-echo" class="q-echo"></span>
+          <span id="agent-source-badges" class="source-badges"></span>
+        </div>
+        <div id="agent-kg-context" class="kg-context" hidden></div>
+        <div id="agent-answer-body" class="markdown-body"></div>
+        <div id="agent-usage" class="usage-strip"></div>
+      </article>
+
+      <div id="agent-loading" class="loading" hidden>
+        <span class="spinner"></span> Asking the agent…
+      </div>
+    </section>
+
+
+    <!-- ============== PAGE 2 ============== -->
+    <section id="page-analytics" class="page">
+      <div class="page-intro">
+        <h2>ESG Analytics for Reporting</h2>
+        <p class="lede">
+          Pick a company. We render its SASB material topics, disclosure coverage, and
+          trends — then draft a multi-section report you can edit. Tick the sections
+          you want, then export a PDF.
+        </p>
+      </div>
+
+      <div class="ask-row">
+        <input id="company-search" type="text" placeholder="Search a company by name or ticker — e.g. TSMC, Macquarie, BHP…" autocomplete="off" />
+      </div>
+      <div id="company-results" class="company-results"></div>
+
+      <div id="analytics-body" hidden>
+
+        <section class="snapshot-block">
+          <h3 id="snap-company-name"></h3>
+          <div class="snapshot-grid">
+            <div class="snap-item"><label>Industry (SASB)</label><strong id="snap-industry">—</strong></div>
+            <div class="snap-item"><label>Ticker</label><strong id="snap-ticker">—</strong></div>
+            <div class="snap-item"><label>Material topics</label><strong id="snap-topics">—</strong></div>
+            <div class="snap-item"><label>Topics with data</label><strong id="snap-coverage">—</strong></div>
+            <div class="snap-item"><label>Reported metrics</label><strong id="snap-metrics">—</strong></div>
+          </div>
+        </section>
+
+        <section class="materiality-block">
+          <h3>SASB Industry Materiality — coverage</h3>
+          <p class="block-hint">Hover for a one-line description. Green = we have data on this topic; grey = gap.</p>
+          <div id="materiality-grid" class="materiality-grid"></div>
+        </section>
+
+        <section class="trend-block">
+          <h3>Trend visualisation</h3>
+          <p class="block-hint">Pick a metric to see year-by-year values. Charts size to fit the card.</p>
+          <div class="trend-controls">
+            <select id="trend-metric"></select>
+            <span id="trend-unit-label" class="unit-label"></span>
+          </div>
+          <div class="trend-chart-wrap">
+            <canvas id="trend-chart"></canvas>
+          </div>
+        </section>
+
+        <section class="report-block">
+          <div class="report-header">
+            <h3>Draft report</h3>
+            <div class="report-actions">
+              <button id="generate-all-btn" class="primary">Generate all sections</button>
+              <button id="export-pdf-btn" class="primary alt">Export selected as PDF</button>
+            </div>
+          </div>
+          <p class="block-hint">
+            Each section drafts independently. Edit inline, untick anything you don't want,
+            then export.
+          </p>
+          <div id="report-sections" class="report-sections"></div>
+        </section>
+      </div>
+
+      <div id="analytics-loading" class="loading" hidden>
+        <span class="spinner"></span> <span id="analytics-loading-text">Loading…</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Powered by Claude Sonnet 4.6 + SASB Industry Standards + Clarity AI ESG dataset &middot;
+    <a href="/api/health">/api/health</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

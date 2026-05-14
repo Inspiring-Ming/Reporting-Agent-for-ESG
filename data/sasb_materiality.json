@@ -1,0 +1,416 @@
+{
+  "_meta": {
+    "version": "2023-12",
+    "source": "SASB Industry Standards (IFRS Foundation)",
+    "curated_for": "AMP AI Expo demo",
+    "industries_included": 6,
+    "note": "Hand-curated from the official SASB PDFs. Topic summaries paraphrased; metrics are verbatim from the standard's Table 1 (Sustainability Disclosure Topics & Metrics)."
+  },
+  "industries": {
+    "Commercial Banks": {
+      "sasb_code_prefix": "FN-CB",
+      "sector": "Financials",
+      "description": "Commercial banks accept deposits and make loans to individuals and corporations. The industry's material ESG issues centre on data security, fair lending, ESG factors in credit decisions, financed emissions, and systemic risk.",
+      "topics": [
+        {
+          "name": "Data Security",
+          "summary": "Banks hold large volumes of personal financial data; breaches damage revenue and customer trust.",
+          "metrics": [
+            {"code": "FN-CB-230a.1", "name": "Number of data breaches; percentage personal data breaches; account holders affected", "unit": "Number, %", "category": "Quantitative"},
+            {"code": "FN-CB-230a.2", "name": "Description of approach to identifying and addressing data security risks", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Financial Inclusion & Capacity Building",
+          "summary": "Lending to unbanked, underbanked or underserved customers — the bank's primary social impact lever.",
+          "metrics": [
+            {"code": "FN-CB-240a.1", "name": "Number and amount of loans outstanding qualifying for small business and community development programmes", "unit": "Number, Currency", "category": "Quantitative"},
+            {"code": "FN-CB-240a.2", "name": "Number and amount of past-due/nonaccrual qualifying loans", "unit": "Number, Currency", "category": "Quantitative"},
+            {"code": "FN-CB-240a.3", "name": "Number of no-cost retail checking accounts for previously unbanked/underbanked customers", "unit": "Number", "category": "Quantitative"},
+            {"code": "FN-CB-240a.4", "name": "Number of participants in financial literacy initiatives", "unit": "Number", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Incorporation of ESG Factors in Credit Analysis",
+          "summary": "How the bank embeds environmental, social and governance considerations into lending decisions.",
+          "metrics": [
+            {"code": "FN-CB-410a.2", "name": "Description of approach to ESG factors in credit analysis", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Financed Emissions",
+          "summary": "Greenhouse gas emissions associated with the bank's lending and investment portfolio — usually orders of magnitude larger than operational emissions.",
+          "metrics": [
+            {"code": "FN-CB-410b.1", "name": "Absolute gross financed emissions, by Scope 1, 2, 3", "unit": "Metric tons CO2-e", "category": "Quantitative"},
+            {"code": "FN-CB-410b.2", "name": "Gross exposure for each industry by asset class", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-CB-410b.3", "name": "Percentage of gross exposure included in financed emissions calculation", "unit": "%", "category": "Quantitative"},
+            {"code": "FN-CB-410b.4", "name": "Description of methodology for financed emissions", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Business Ethics",
+          "summary": "Conduct risk: fraud, insider trading, antitrust, market manipulation, malpractice.",
+          "metrics": [
+            {"code": "FN-CB-510a.1", "name": "Total monetary losses from legal proceedings (industry conduct)", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-CB-510a.2", "name": "Description of whistleblower policies and procedures", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Systemic Risk Management",
+          "summary": "The bank's contribution to and management of systemic financial risk.",
+          "metrics": [
+            {"code": "FN-CB-550a.1", "name": "Global Systemically Important Bank (G-SIB) score, by category", "unit": "Basis points (bps)", "category": "Quantitative"},
+            {"code": "FN-CB-550a.2", "name": "Description of approach to integrating stress test results into capital adequacy planning", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "FN-CB-000.A", "name": "Number and value of checking and savings accounts (personal, small business)", "unit": "Number, Currency"},
+        {"code": "FN-CB-000.B", "name": "Number and value of loans (personal, small business, corporate)", "unit": "Number, Currency"}
+      ]
+    },
+    "Asset Management & Custody Activities": {
+      "sasb_code_prefix": "FN-AC",
+      "sector": "Financials",
+      "description": "Asset managers and custodians hold and invest client assets. Material issues centre on transparent advice, ESG integration, financed emissions of the portfolio, and conduct.",
+      "topics": [
+        {
+          "name": "Transparent Information & Fair Advice for Customers",
+          "summary": "Fiduciary duty: are clients receiving clear, suitable advice?",
+          "metrics": [
+            {"code": "FN-AC-270a.1", "name": "Number/percentage of licensed employees with regulatory investigations or complaints", "unit": "Number, %", "category": "Quantitative"},
+            {"code": "FN-AC-270a.2", "name": "Total monetary losses from legal proceedings (marketing/communication)", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-AC-270a.3", "name": "Description of approach to informing customers about products", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Employee Diversity & Inclusion",
+          "summary": "Gender and diversity representation across executive, management and professional roles.",
+          "metrics": [
+            {"code": "FN-AC-330a.1", "name": "Percentage gender and diversity representation by role tier", "unit": "%", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Incorporation of ESG Factors in Investment Management & Advisory",
+          "summary": "How ESG considerations are integrated into investment processes and advice.",
+          "metrics": [
+            {"code": "FN-AC-410a.1", "name": "AUM employing ESG integration, themed investing, and screening", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-AC-410a.2", "name": "Description of approach to incorporating ESG factors", "unit": "n/a", "category": "Discussion and Analysis"},
+            {"code": "FN-AC-410a.3", "name": "Description of proxy voting and investee engagement policies", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Financed Emissions",
+          "summary": "Emissions associated with assets under management — the dominant climate footprint for asset managers.",
+          "metrics": [
+            {"code": "FN-AC-410b.1", "name": "Absolute gross financed emissions, by Scope 1, 2, 3", "unit": "Metric tons CO2-e", "category": "Quantitative"},
+            {"code": "FN-AC-410b.2", "name": "Total AUM included in financed emissions disclosure", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-AC-410b.3", "name": "Percentage of total AUM included", "unit": "%", "category": "Quantitative"},
+            {"code": "FN-AC-410b.4", "name": "Description of financed emissions methodology", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Business Ethics",
+          "summary": "Conduct risk: fraud, insider trading, antitrust, market manipulation.",
+          "metrics": [
+            {"code": "FN-AC-510a.1", "name": "Total monetary losses from legal proceedings (industry conduct)", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-AC-510a.2", "name": "Description of whistleblower policies and procedures", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "FN-AC-000.A", "name": "Total assets under management (AUM)", "unit": "Currency"},
+        {"code": "FN-AC-000.B", "name": "Total assets under custody and supervision", "unit": "Currency"}
+      ]
+    },
+    "Insurance": {
+      "sasb_code_prefix": "FN-IN",
+      "sector": "Financials",
+      "description": "Insurance entities underwrite risk for individuals and businesses. Material issues span fair customer treatment, ESG integration in invested assets, climate-related physical risk, and systemic risk.",
+      "topics": [
+        {
+          "name": "Transparent Information & Fair Advice for Customers",
+          "summary": "Clarity of policy terms and product suitability — drives complaints, churn, and regulatory action.",
+          "metrics": [
+            {"code": "FN-IN-270a.1", "name": "Total monetary losses from legal proceedings (marketing/communication)", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-270a.2", "name": "Complaints-to-claims ratio", "unit": "Rate", "category": "Quantitative"},
+            {"code": "FN-IN-270a.3", "name": "Customer retention rate", "unit": "Rate", "category": "Quantitative"},
+            {"code": "FN-IN-270a.4", "name": "Description of approach to informing customers about products", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Incorporation of ESG Factors in Investment Management",
+          "summary": "Insurers' general accounts hold large investment portfolios; ESG integration matters there too.",
+          "metrics": [
+            {"code": "FN-IN-410a.2", "name": "Description of approach to ESG factors in investment management", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Policies Designed to Incentivise Responsible Behaviour",
+          "summary": "Underwriting design that rewards sustainability — e.g. low-carbon technology, health, safety.",
+          "metrics": [
+            {"code": "FN-IN-410b.1", "name": "Net premiums written related to energy efficiency and low-carbon technology", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-410b.2", "name": "Discussion of products that incentivise sustainable behaviour", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Financed Emissions",
+          "summary": "Emissions associated with the insurer's investment portfolio.",
+          "metrics": [
+            {"code": "FN-IN-410c.1", "name": "Absolute gross financed emissions, by Scope 1, 2, 3", "unit": "Metric tonnes CO2-e", "category": "Quantitative"},
+            {"code": "FN-IN-410c.2", "name": "Gross exposure for each industry by asset class", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-410c.3", "name": "Percentage of gross exposure included in financed emissions calculation", "unit": "%", "category": "Quantitative"},
+            {"code": "FN-IN-410c.4", "name": "Description of financed emissions methodology", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Physical Risk Exposure",
+          "summary": "Climate-related catastrophic risk to the underwriting book — the insurer's defining ESG exposure.",
+          "metrics": [
+            {"code": "FN-IN-450a.1", "name": "Probable Maximum Loss (PML) of insured products from weather-related natural catastrophes", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-450a.2", "name": "Total monetary losses from insurance pay-outs from natural catastrophes", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-450a.3", "name": "Description of approach to environmental risks in underwriting and capital adequacy", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Systemic Risk Management",
+          "summary": "The insurer's contribution to and management of systemic financial risk.",
+          "metrics": [
+            {"code": "FN-IN-550a.1", "name": "Exposure to derivative instruments by category", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-550a.2", "name": "Total fair value of securities lending collateral assets", "unit": "Currency", "category": "Quantitative"},
+            {"code": "FN-IN-550a.3", "name": "Description of approach to managing systemic non-insurance activities", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "FN-IN-000.A", "name": "Number of policies in force, by segment (P&C, life, assumed reinsurance)", "unit": "Number"}
+      ]
+    },
+    "Real Estate": {
+      "sasb_code_prefix": "IF-RE",
+      "sector": "Infrastructure",
+      "description": "Real estate entities own, develop and operate property. Material issues centre on energy and water in buildings, tenant impact, and climate adaptation.",
+      "topics": [
+        {
+          "name": "Energy Management",
+          "summary": "Buildings are large energy consumers; performance affects operating costs, regulatory exposure, and tenant demand.",
+          "metrics": [
+            {"code": "IF-RE-130a.1", "name": "Energy consumption data coverage as % of total floor area, by property sector", "unit": "% by floor area", "category": "Quantitative"},
+            {"code": "IF-RE-130a.2", "name": "Total energy consumed; % grid electricity; % renewable, by property sector", "unit": "GJ, %", "category": "Quantitative"},
+            {"code": "IF-RE-130a.3", "name": "Like-for-like % change in energy consumption", "unit": "%", "category": "Quantitative"},
+            {"code": "IF-RE-130a.4", "name": "% of eligible portfolio with energy rating and ENERGY STAR certification", "unit": "% by floor area", "category": "Quantitative"},
+            {"code": "IF-RE-130a.5", "name": "Description of energy management integration into investment analysis", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Water Management",
+          "summary": "Water use, especially in regions of high baseline water stress.",
+          "metrics": [
+            {"code": "IF-RE-140a.1", "name": "Water withdrawal data coverage as % of total floor area; % in High/Extremely High water stress regions", "unit": "% by floor area", "category": "Quantitative"},
+            {"code": "IF-RE-140a.2", "name": "Total water withdrawn; % in High/Extremely High water stress regions", "unit": "Thousand m3, %", "category": "Quantitative"},
+            {"code": "IF-RE-140a.3", "name": "Like-for-like % change in water withdrawn", "unit": "%", "category": "Quantitative"},
+            {"code": "IF-RE-140a.4", "name": "Description of water management risks and mitigation", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Management of Tenant Sustainability Impacts",
+          "summary": "Owner influence over tenant resource use through lease structure and submetering.",
+          "metrics": [
+            {"code": "IF-RE-410a.1", "name": "% of new leases with cost-recovery clause for resource-efficiency capex; associated leased floor area", "unit": "% by floor area, m2", "category": "Quantitative"},
+            {"code": "IF-RE-410a.2", "name": "% of tenants separately metered/submetered for electricity and water", "unit": "% by floor area", "category": "Quantitative"},
+            {"code": "IF-RE-410a.3", "name": "Discussion of approach to tenant sustainability impact", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Climate Change Adaptation",
+          "summary": "Physical climate risk to the property portfolio — flood zones, exposure analysis.",
+          "metrics": [
+            {"code": "IF-RE-450a.1", "name": "Area of properties located in 100-year flood zones, by property sector", "unit": "m2", "category": "Quantitative"},
+            {"code": "IF-RE-450a.2", "name": "Description of climate change risk exposure and mitigation", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "IF-RE-000.A", "name": "Number of assets, by property sector", "unit": "Number"},
+        {"code": "IF-RE-000.B", "name": "Leasable floor area, by property sector", "unit": "m2"},
+        {"code": "IF-RE-000.C", "name": "% of indirectly managed assets, by property sector", "unit": "% by floor area"},
+        {"code": "IF-RE-000.D", "name": "Average occupancy rate, by property sector", "unit": "%"}
+      ]
+    },
+    "Metals & Mining": {
+      "sasb_code_prefix": "EM-MM",
+      "sector": "Extractives & Minerals Processing",
+      "description": "Mining operations are energy-intensive, water-intensive and land-intensive. Material issues span emissions, biodiversity, tailings, human rights, and worker safety.",
+      "topics": [
+        {
+          "name": "Greenhouse Gas Emissions",
+          "summary": "Direct emissions from fuel use during mining, ore processing and smelting.",
+          "metrics": [
+            {"code": "EM-MM-110a.1", "name": "Gross global Scope 1 emissions; % covered under emissions-limiting regulations", "unit": "Metric tonnes CO2-e, %", "category": "Quantitative"},
+            {"code": "EM-MM-110a.2", "name": "Discussion of strategy to manage Scope 1 emissions and targets", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Air Quality",
+          "summary": "Non-GHG air pollutants — particulates, NOx, SOx, mercury, lead, VOCs.",
+          "metrics": [
+            {"code": "EM-MM-120a.1", "name": "Air emissions: CO, NOx, SOx, PM10, mercury, lead, VOCs", "unit": "Metric tonnes", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Energy Management",
+          "summary": "Total energy consumption and the share from grid electricity vs renewables.",
+          "metrics": [
+            {"code": "EM-MM-130a.1", "name": "Total energy consumed; % grid electricity; % renewable", "unit": "GJ, %", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Water Management",
+          "summary": "Water-intensive operations, often in water-stressed regions.",
+          "metrics": [
+            {"code": "EM-MM-140a.1", "name": "Total water withdrawn; total water consumed; % in High/Extremely High water stress regions", "unit": "Thousand m3, %", "category": "Quantitative"},
+            {"code": "EM-MM-140a.2", "name": "Number of incidents of non-compliance with water quality permits", "unit": "Number", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Waste & Hazardous Materials Management",
+          "summary": "Tailings, waste rock, hazardous waste — long-term liabilities and incident risk.",
+          "metrics": [
+            {"code": "EM-MM-150a.4", "name": "Total weight of non-mineral waste generated", "unit": "Metric tonnes", "category": "Quantitative"},
+            {"code": "EM-MM-150a.5", "name": "Total weight of tailings produced", "unit": "Metric tonnes", "category": "Quantitative"},
+            {"code": "EM-MM-150a.6", "name": "Total weight of waste rock generated", "unit": "Metric tonnes", "category": "Quantitative"},
+            {"code": "EM-MM-150a.7", "name": "Total weight of hazardous waste generated", "unit": "Metric tonnes", "category": "Quantitative"},
+            {"code": "EM-MM-150a.8", "name": "Total weight of hazardous waste recycled", "unit": "Metric tonnes", "category": "Quantitative"},
+            {"code": "EM-MM-150a.9", "name": "Number of significant incidents associated with hazardous materials and waste", "unit": "Number", "category": "Quantitative"},
+            {"code": "EM-MM-150a.10", "name": "Description of waste and hazardous materials management policies", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Biodiversity Impacts",
+          "summary": "Ecological footprint of mining sites; acid rock drainage; protected/endangered habitat.",
+          "metrics": [
+            {"code": "EM-MM-160a.1", "name": "Description of environmental management policies for active sites", "unit": "n/a", "category": "Discussion and Analysis"},
+            {"code": "EM-MM-160a.2", "name": "% of mine sites where acid rock drainage is predicted, mitigated, or under remediation", "unit": "%", "category": "Quantitative"},
+            {"code": "EM-MM-160a.3", "name": "% of proved/probable reserves in or near sites with protected conservation status or endangered species habitat", "unit": "%", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Security, Human Rights & Rights of Indigenous Peoples",
+          "summary": "Reserves in conflict zones or on indigenous land; rights-based engagement.",
+          "metrics": [
+            {"code": "EM-MM-210a.1", "name": "% of proved/probable reserves in or near areas of conflict", "unit": "%", "category": "Quantitative"},
+            {"code": "EM-MM-210a.2", "name": "% of proved/probable reserves in or near indigenous land", "unit": "%", "category": "Quantitative"},
+            {"code": "EM-MM-210a.3", "name": "Discussion of human rights, indigenous rights, and conflict-area engagement", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Workforce Health & Safety",
+          "summary": "Mining is a high-hazard industry; injury and fatality rates are headline metrics.",
+          "metrics": [
+            {"code": "EM-MM-320a.1", "name": "All-incidence rate, fatality rate, near miss frequency rate, average hours of training", "unit": "Rate", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Tailings Storage Facilities Management",
+          "summary": "Tailings dam safety — catastrophic-loss risk that has reshaped the industry post-Brumadinho.",
+          "metrics": [
+            {"code": "EM-MM-540a.1", "name": "Tailings storage facility inventory table (location, capacity, hazard classification, etc.)", "unit": "Various", "category": "Quantitative"},
+            {"code": "EM-MM-540a.2", "name": "Summary of tailings management systems and governance", "unit": "n/a", "category": "Discussion and Analysis"},
+            {"code": "EM-MM-540a.3", "name": "Approach to development of Emergency Preparedness and Response Plans", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "EM-MM-000.A", "name": "Production of metal ores and finished metal products", "unit": "Metric tonnes saleable"},
+        {"code": "EM-MM-000.B", "name": "Total number of employees, % contractors", "unit": "Number, %"}
+      ]
+    },
+    "Electric Utilities & Power Generators": {
+      "sasb_code_prefix": "IF-EU",
+      "sector": "Infrastructure",
+      "description": "Electricity generation is the world's largest source of GHG emissions. Material issues span emissions, air quality, water, customer affordability, grid reliability, and nuclear safety where applicable.",
+      "topics": [
+        {
+          "name": "Greenhouse Gas Emissions & Energy Resource Planning",
+          "summary": "GHG emissions from generation are the single largest material issue for the industry.",
+          "metrics": [
+            {"code": "IF-EU-110a.1", "name": "Gross global Scope 1 emissions; % under emissions-limiting/reporting regulations", "unit": "Metric tonnes CO2-e, %", "category": "Quantitative"},
+            {"code": "IF-EU-110a.2", "name": "GHG emissions associated with power deliveries", "unit": "Metric tonnes CO2-e", "category": "Quantitative"},
+            {"code": "IF-EU-110a.3", "name": "Discussion of strategy to manage Scope 1 emissions, targets, performance", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Air Quality",
+          "summary": "Non-GHG air pollutants from combustion plants — health-affecting in dense population areas.",
+          "metrics": [
+            {"code": "IF-EU-120a.1", "name": "Air emissions: NOx, SOx, PM10, lead, mercury; % near dense population", "unit": "Metric tonnes, %", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Water Management",
+          "summary": "Cooling water and process water — material in arid and water-stressed regions.",
+          "metrics": [
+            {"code": "IF-EU-140a.1", "name": "Total water withdrawn; total water consumed; % in High/Extremely High water stress regions", "unit": "Thousand m3, %", "category": "Quantitative"},
+            {"code": "IF-EU-140a.2", "name": "Number of incidents of non-compliance with water quality permits", "unit": "Number", "category": "Quantitative"},
+            {"code": "IF-EU-140a.3", "name": "Description of water management risks and mitigation", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Coal Ash Management",
+          "summary": "Coal combustion product handling and recycling — a legacy environmental liability.",
+          "metrics": [
+            {"code": "IF-EU-150a.1", "name": "Amount of coal combustion products (CCPs) generated; % recycled", "unit": "Metric tonnes, %", "category": "Quantitative"},
+            {"code": "IF-EU-150a.3", "name": "Description of CCP management policies", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Energy Affordability",
+          "summary": "Customer affordability and access — disconnections, reconnection rates, retail rates.",
+          "metrics": [
+            {"code": "IF-EU-240a.1", "name": "Average retail electric rate (residential, commercial, industrial)", "unit": "Rate", "category": "Quantitative"},
+            {"code": "IF-EU-240a.3", "name": "Number of residential disconnections for non-payment; % reconnected within 30 days", "unit": "Number, %", "category": "Quantitative"},
+            {"code": "IF-EU-240a.4", "name": "Discussion of impact of external factors on customer affordability", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Workforce Health & Safety",
+          "summary": "High-hazard industry; injury and fatality rates are tracked alongside training hours.",
+          "metrics": [
+            {"code": "IF-EU-320a.1", "name": "Total recordable incident rate (TRIR), fatality rate, near miss frequency rate", "unit": "Rate", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "End-Use Efficiency & Demand",
+          "summary": "Demand-side management — smart grid coverage, customer efficiency programmes.",
+          "metrics": [
+            {"code": "IF-EU-420a.2", "name": "% of electric load served by smart grid technology", "unit": "% by MWh", "category": "Quantitative"},
+            {"code": "IF-EU-420a.3", "name": "Customer electricity savings from efficiency measures, by market", "unit": "MWh", "category": "Quantitative"}
+          ]
+        },
+        {
+          "name": "Nuclear Safety & Emergency Management",
+          "summary": "For utilities with nuclear assets — safety review status and emergency preparedness.",
+          "metrics": [
+            {"code": "IF-EU-540a.1", "name": "Total number of nuclear power units, broken down by safety review results", "unit": "Number", "category": "Quantitative"},
+            {"code": "IF-EU-540a.2", "name": "Description of nuclear safety and emergency preparedness", "unit": "n/a", "category": "Discussion and Analysis"}
+          ]
+        },
+        {
+          "name": "Grid Resiliency",
+          "summary": "Outage frequency and duration; physical and cybersecurity compliance.",
+          "metrics": [
+            {"code": "IF-EU-550a.1", "name": "Number of incidents of non-compliance with physical/cybersecurity standards", "unit": "Number", "category": "Quantitative"},
+            {"code": "IF-EU-550a.2", "name": "SAIDI, SAIFI, CAIDI inclusive of major event days", "unit": "Minutes, Number", "category": "Quantitative"}
+          ]
+        }
+      ],
+      "activity_metrics": [
+        {"code": "IF-EU-000.A", "name": "Number of customers served (residential, commercial, industrial)", "unit": "Number"},
+        {"code": "IF-EU-000.B", "name": "Total electricity delivered, by customer class", "unit": "MWh"},
+        {"code": "IF-EU-000.C", "name": "Length of transmission and distribution lines", "unit": "km"},
+        {"code": "IF-EU-000.D", "name": "Total electricity generated, % by major energy source, % in regulated markets", "unit": "MWh, %"},
+        {"code": "IF-EU-000.E", "name": "Total wholesale electricity purchased", "unit": "MWh"}
+      ]
+    }
+  }
+}

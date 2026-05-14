@@ -1,0 +1,14 @@
+.env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+server.log
+*.log
+data/esg_metrics.sqlite
+.idea/
+.vscode/
+.ipynb_checkpoints/
+*.pdf
+!docs/*.pdf

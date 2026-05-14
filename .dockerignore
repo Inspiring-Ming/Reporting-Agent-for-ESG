@@ -1,0 +1,16 @@
+.env
+.env.local
+.git
+.gitignore
+venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+.DS_Store
+server.log
+docs/
+README.md
+.dockerignore
+Dockerfile
+render.yaml
+scripts/

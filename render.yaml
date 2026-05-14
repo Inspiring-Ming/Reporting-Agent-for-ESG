@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: amp-ai-expo-demo
+    runtime: docker
+    plan: starter   # ~$7/mo always-on (free tier sleeps after 15min idle)
+    region: oregon  # change to "singapore" if your audience is closer
+    healthCheckPath: /api/health
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false             # paste in Render dashboard; never commit
+      - key: ACCESS_PASSWORD
+        sync: false             # shared password for booth visitors
+      - key: ACCESS_COOKIE_SECRET
+        generateValue: true     # Render auto-generates a random value
+      - key: CLAUDE_MODEL
+        value: claude-sonnet-4-6
+# NOTE: data files are baked into the Docker image (data/sasb_materiality.json
+# and data/esg_metrics.sqlite, ~270MB total). No persistent disk needed — the
+# data is read-only at runtime. To update the dataset, rebuild and redeploy.
