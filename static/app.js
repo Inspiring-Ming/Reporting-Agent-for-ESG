@@ -1,4 +1,4 @@
-// AMP AI Expo demo — frontend.
+// Axiolytics — frontend.
 
 // ---------- page tabs ----------
 document.querySelectorAll('.page-tab').forEach(btn => {

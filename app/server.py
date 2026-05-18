@@ -1,4 +1,4 @@
-"""Flask server for the AMP AI Expo demo.
+"""Flask server for Axiolytics.
 
 Two pages:
   1. ESG Knowledge Agent  → /api/ask

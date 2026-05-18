@@ -71,7 +71,7 @@ def is_authed() -> bool:
 
 
 _LOGIN_HTML = """<!doctype html>
-<html><head><title>AMP AI Expo — sign in</title>
+<html><head><title>Axiolytics — sign in</title>
 <style>
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial;
          background: #f6f7fb; margin: 0; padding: 0;
@@ -88,13 +88,21 @@ _LOGIN_HTML = """<!doctype html>
            font-weight: 600; cursor: pointer; }
   button:hover { background: #002852; }
   .err { color: #c53030; font-size: 13px; margin-top: 10px; }
+  .hint { color: #5b6477; font-size: 12px; margin-top: 16px;
+          padding-top: 14px; border-top: 1px solid #eef0f5; line-height: 1.5; }
+  .hint a { color: #0072CE; text-decoration: none; }
+  .hint a:hover { text-decoration: underline; }
 </style></head>
 <body><form class="card" method="post" action="/login">
-  <h1>AMP AI Expo demo</h1>
+  <h1>Axiolytics</h1>
   <p>Enter the access password to continue.</p>
   <input type="password" name="password" autofocus required placeholder="Password" />
   <button type="submit">Enter</button>
   {% if error %}<div class="err">{{ error }}</div>{% endif %}
+  <div class="hint">
+    Don't have the password? Email
+    <a href="mailto:mingchin.yuyu@gmail.com">mingchin.yuyu@gmail.com</a>.
+  </div>
 </form></body></html>"""
 
 

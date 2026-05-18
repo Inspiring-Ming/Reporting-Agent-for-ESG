@@ -129,7 +129,7 @@ def render_pdf(*, title: str, subtitle: str, sections: list[dict]) -> bytes:
         buf, pagesize=A4,
         leftMargin=2 * cm, rightMargin=2 * cm,
         topMargin=2 * cm, bottomMargin=2 * cm,
-        title=title, author="AMP AI Expo demo",
+        title=title, author="Axiolytics",
     )
     styles = _styles()
     story: list = []
@@ -162,7 +162,7 @@ def render_pdf(*, title: str, subtitle: str, sections: list[dict]) -> bytes:
         story.append(Spacer(1, 0.4 * cm))
 
     story.append(Paragraph(
-        f"Generated {datetime.now().strftime('%d %B %Y')} — AMP AI Expo demo "
+        f"Generated {datetime.now().strftime('%d %B %Y')} — Axiolytics "
         f"(grounded in SASB Industry Standards and Clarity AI ESG dataset). "
         f"This document is an AI-assisted draft for educational purposes; "
         f"verify all figures before external use.",
