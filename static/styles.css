@@ -33,10 +33,16 @@ a:hover { text-decoration: underline; }
 }
 .brand {
   display: flex; justify-content: space-between; align-items: center;
-  font-size: 14px; opacity: 0.85;
+  flex-wrap: wrap; gap: 10px 18px;
+  font-size: 14px;
 }
-.brand .logo { font-weight: 700; letter-spacing: 0.5px; font-size: 16px; }
+.brand .logo {
+  font-weight: 800; letter-spacing: 0.2px; font-size: 22px;
+  color: #fff; opacity: 1;
+  white-space: nowrap;
+}
 .brand .logo .dot { color: var(--amp-accent); }
+.brand .event { opacity: 0.85; font-size: 13px; }
 .site-header h1 { margin: 8px 0 4px; font-size: 28px; letter-spacing: -0.3px; }
 .site-header .subtitle { margin: 0 0 18px; opacity: 0.85; font-size: 14px; }
 
