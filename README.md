@@ -26,6 +26,37 @@ knowledge graph + LLM extension produces grounded, defensible ESG analysis.
 
 The architecture supports the other 71 SASB industries — add a curated entry to `sasb_materiality.json`, re-run `build_metrics_db.py`, and they show up.
 
+## Two retrieval modes
+
+| Mode | Who decides what to retrieve | Entry point |
+|---|---|---|
+| **RAG (page 1 + 2)** | Our code. `server.py` resolves the company from the question, passes a fixed context blob, one model call. | `llm.answer_question()` |
+| **Agent** | The model. Given tool definitions, it chooses which to call and in what order, observing each result before deciding the next step. | `agent.run()` |
+
+### Agent loop (`app/agent.py`)
+
+Five tools wrap the same `store.py` methods the rest of the app uses, so there is
+one source of truth for data access: `search_companies`, `get_company_metrics`,
+`get_metric_timeseries`, `get_materiality_coverage`, `get_industry_materiality`.
+
+Design decisions worth noting:
+
+- **Hard turn cap** (`MAX_TURNS = 8`) rather than `while True`. A looping model is
+  a bug you get billed for.
+- **Full trace.** Every tool call records name, arguments, success, latency and a
+  result preview. An agent you cannot audit is not deployable in a regulated setting.
+- **Errors go back to the model** as `tool_result` with `is_error`, rather than
+  raising. The model can recover by trying a different query instead of the run dying.
+- **Grounding markers.** The system prompt requires `[retrieved]` on anything from a
+  tool result and `[general]` on wider context, so a reader can see which is which.
+- **Cached prefix reused** from `llm.py`, so the materiality reference stays on the
+  cheap path (~11K cached tokens read per run in testing).
+
+Observed on a two-part question ("what emissions does Westpac report, and how
+complete is their SASB disclosure?"): 3 turns, chaining
+`search_companies` -> `get_company_metrics` -> `get_materiality_coverage`. The
+sequence was chosen by the model, not hardcoded.
+
 ## How the LLM is used
 
 - Model: **Claude Sonnet 4.6** (`claude-sonnet-4-6`).
