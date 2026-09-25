@@ -7,6 +7,7 @@ __pycache__/
 server.log
 *.log
 data/esg_metrics.sqlite
+data/companies_master.csv
 .idea/
 .vscode/
 .ipynb_checkpoints/

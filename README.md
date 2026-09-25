@@ -12,7 +12,7 @@ knowledge graph + LLM extension produces grounded, defensible ESG analysis.
 
 ## Data layered into the demo
 
-- **Companies** — 61,272 unique companies merged from 4 source CSVs into [data/companies_master.csv](data/companies_master.csv), each mapped to a SASB industry. Built by [scripts/build_company_master.py](scripts/build_company_master.py).
+- **Companies** — 61,272 unique companies merged from 4 source CSVs into `data/companies_master.csv`, each mapped to a SASB industry. *Not committed: derived from a licensed Clarity AI dataset. Rebuild with `scripts/build_company_master.py` if you hold a licence.* Built by [scripts/build_company_master.py](scripts/build_company_master.py).
 - **SASB materiality** — Hand-curated from the 6 official SASB industry standards (PDFs) into [data/sasb_materiality.json](data/sasb_materiality.json): 39 disclosure topics, 101 metrics across the 6 industries below.
 - **ESG values** — 937,089 metric rows from Clarity AI's dataset, filtered to companies in the 6 demo industries, indexed in [data/esg_metrics.sqlite](data/esg_metrics.sqlite). Built by [scripts/build_metrics_db.py](scripts/build_metrics_db.py).
 
