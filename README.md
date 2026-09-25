@@ -1,7 +1,40 @@
-# AMP AI Expo Demo — AI-Powered ESG Reporting & Analytics
+# Grounded RAG and Tool-Calling Agent
 
-A live ESG agent for the **AMP AI Expo (12 May 2026)**, demoing how a SASB-aligned
-knowledge graph + LLM extension produces grounded, defensible ESG analysis.
+An LLM system built for a setting where the answer is not enough: a user has to be
+able to see *where each claim came from* and check it. Originally built for the
+AMP AI Expo (May 2026) over ESG disclosure data, but the pattern is domain-neutral
+and is the one regulated industries need from generative AI.
+
+**The problem.** An LLM asked about a company will answer either way, whether or
+not it has the data. In a reporting or analysis context that is worse than useless,
+because a confident wrong number is harder to catch than a missing one.
+
+**The approach.** Retrieve before generating, and label every part of the answer by
+where it came from. Two modes, deliberately:
+
+| Mode | Who decides what to retrieve | Cost | When it earns its place |
+|---|---|---|---|
+| **RAG** | Application code, fixed path | 1 model call | Retrieval pattern is predictable |
+| **Agent** | The model, via tool calls | 1–8 calls | Question shape varies, needs chaining |
+
+The agent is not the default. It costs more and is harder to test, so it should have
+to justify itself against the simpler option.
+
+**What makes it auditable.** Bounded turn cap rather than an open loop. Every tool
+call traced with arguments, outcome and latency. Tool failures returned to the model
+as results so it recovers rather than dying. Enforced markers separating retrieved
+data from model-generated context. An 18-test suite covering exactly these properties,
+runnable without an API key or the dataset.
+
+Observed on a two-part question: 3 turns, chaining `search_companies` →
+`get_company_metrics` → `get_materiality_coverage`. The sequence was chosen by the
+model, not hardcoded. Asked about a company not in the dataset, it surfaced the
+closest match and flagged that it was a subsidiary rather than the parent, instead
+of answering from memory.
+
+**Stack:** Python, Anthropic API (Claude), Flask, SQLite, Docker, pytest.
+
+---
 
 ## Two pages
 
